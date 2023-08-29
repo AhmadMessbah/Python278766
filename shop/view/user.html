@@ -19,15 +19,17 @@
     </tr>
     </thead>
     <tbody>
+    {% for user in user_list %}
     <tr>
-        <td>1</td>
-        <td>Ahmad</td>
-        <td>Ahmad123</td>
+        <td>{{user.code}}</td>
+        <td>{{user.user_name}}</td>
+        <td>{{user.password}}</td>
         <td>
-            <button>Edit</button>
-            <button>Remove</button>
+            <button onclick="edit({{user.code}})">Edit</button>
+            <button onclick="remove({{{{user.code}}}})">Remove</button>
         </td>
     </tr>
+    {% endfor %}
     </tbody>
 </table>
 
