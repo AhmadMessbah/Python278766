@@ -2,6 +2,16 @@
 
 
 {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
 
 <form action="/user" method="post">
     <input type="text" name="username" placeholder="Username">
@@ -13,9 +23,17 @@
     <thead>
     <tr>
         <th>Code</th>
+        <th>inv_code</th>
+        <th>customer</th>
+        <th>customer_id</th>
         <th>Username</th>
-        <th>Password</th>
-        <th>Operation</th>
+        <th>amount</th>
+        <th>discount</th>
+        <th>pure_price</th>
+        <th>status</th>
+        <th>date_time</th>
+        <th>description</th>
+
     </tr>
     </thead>
     <tbody>

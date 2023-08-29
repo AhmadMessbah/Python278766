@@ -10,8 +10,8 @@ class Invoice(Base):
 
     code = Column(Integer, primary_key=True)
     inv_code = Column(Integer)
-    custumer = Column(Integer)
-    custumer_id = Column(Integer, ForeignKey('customer.id'))
+    customer = Column(Integer)
+    customer_id = Column(Integer, ForeignKey('customer.id'))
     amount = Column(Integer)
     discount = Column(Integer)
     pure_price = Column(Integer)
