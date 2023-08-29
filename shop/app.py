@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, url_for
-
+import logging
 
 app = Flask(__name__,template_folder="view",static_folder="view/static")
 
@@ -10,3 +10,5 @@ def home():
 
 
 app.run()
+
+
