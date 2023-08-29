@@ -8,8 +8,8 @@ from sqlalchemy.orm import sessionmaker
 
 class DatabaseManager:
     def make_engine(self):
-        # engine = create_engine('mysql+pymysql://root:root123@localhost:3306/mft', echo=True)
-        self.engine = create_engine('mysql+pymysql://root:@localhost:3307/mft')
+        self.engine = create_engine('mysql+pymysql://root:root123@localhost:3306/mft', echo=True)
+        # self.engine = create_engine('mysql+pymysql://root:@localhost:3307/mft')
 
         # Create Tables
         Base.metadata.create_all(self.engine)
