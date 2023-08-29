@@ -1,7 +1,7 @@
 import datetime
 
 from sqlalchemy import Column, Integer, String, ForeignKey
-from mft.model.entity.base import Base
+from shop.model.entity.base import Base
 from sqlalchemy.orm import relationship
 
 
@@ -15,9 +15,9 @@ class Invoice(Base):
     amount = Column(Integer)
     discount = Column(Integer)
     pure_price = Column(Integer)
-    status = Column(bool)
-    date_time = Column(datetime.datetime)
-    description = Column(string(50))
+    status = Column("bool")
+    date_time = Column("datetime.datetime")
+    description = Column(str(50))
 
 
     # customer = relationship("Customer", back_populates="invoices")
