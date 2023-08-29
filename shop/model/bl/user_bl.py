@@ -14,9 +14,9 @@ class UserBl:
         return da.save(user)
 
     @classmethod
-    def remove(cls, id):
+    def remove(cls, code):
         da = DatabaseManager()
-        user = da.find_by_id(id)
+        user = da.find_by_code(code)
         return da.remove(user)
 
     @classmethod
@@ -25,6 +25,6 @@ class UserBl:
         return da.find_all(User)
 
     @classmethod
-    def find_by_id(cls, id):
+    def find_by_code(cls, code):
         da = DatabaseManager()
-        return da.find_by_id(User, id)
+        return da.find_by_code(User, code)

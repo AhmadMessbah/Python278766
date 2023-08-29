@@ -51,9 +51,9 @@ class DatabaseManager:
         return entity_list
 
 
-    def find_by_id(self, class_name, id):
+    def find_by_code(self, class_name, code):
         self.make_engine()
-        entity = self.session.get(class_name, id)
+        entity = self.session.get(class_name, code)
         self.session.close()
         return entity
 
