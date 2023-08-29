@@ -4,18 +4,16 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship
 from sqlalchemy import text, and_, or_
 
-from mft.model.entity.base import Base
-
 from sqlalchemy.orm import sessionmaker
 
-from mft.model.entity.customer import Customer
+from shop.model.entity.base import Base
 
 
 # engine = create_engine('mysql+pymysql://root:root123@localhost:3306/mft', echo=True)
 
 class DatabaseManager:
     def make_engine(self):
-        self.engine = create_engine('mysql+pymysql://root:@localhost:3306/mft')
+        self.engine = create_engine('mysql+pymysql://root:@localhost:3307/mft')
 
         # Create Tables
         Base.metadata.create_all(self.engine)
