@@ -22,7 +22,7 @@ def users():
 
 
 @app.route("/storage", methods=["GET","POST","PUT", "DELETE"])
-def users():
+def storages():
     if request.method=="POST":
         pass
     elif request.method =="PUT":
@@ -33,7 +33,7 @@ def users():
 
 
 @app.route("/invoice", methods=["GET","POST","PUT", "DELETE"])
-def users():
+def invoices():
     if request.method=="POST":
         pass
     elif request.method =="PUT":
@@ -43,7 +43,7 @@ def users():
     return render_template("invoice.html")
 
 @app.route("/stuff", methods=["GET","POST","PUT", "DELETE"])
-def users():
+def stuffs():
     if request.method=="POST":
         pass
     elif request.method =="PUT":
