@@ -1,2 +1,2 @@
 class FinancialDocBl:
-    pass
+     pass
