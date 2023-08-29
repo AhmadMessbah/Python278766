@@ -1,0 +1,34 @@
+{% extends 'template.html' %}
+
+
+{% block content %}
+
+<form action="/user" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Save">
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Operation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Ahmad</td>
+        <td>Ahmad123</td>
+        <td>
+            <button>Edit</button>
+            <button>Remove</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+{% endblock %}
