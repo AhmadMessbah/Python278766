@@ -11,12 +11,12 @@ class UserBl:
     @classmethod
     def edit(cls, user):
         da = DatabaseManager()
-        return da.save(user)
+        return da.edit(user)
 
     @classmethod
     def remove(cls, code):
         da = DatabaseManager()
-        user = da.find_by_code(code)
+        user = da.find_by_code(User, code)
         return da.remove(user)
 
     @classmethod
