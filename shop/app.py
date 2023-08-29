@@ -13,12 +13,44 @@ def home():
 @app.route("/user", methods=["GET","POST","PUT", "DELETE"])
 def users():
     if request.method=="POST":
-        pass
+        print(UserController.save( request.form.get("username"),  request.form.get("password")))
     elif request.method =="PUT":
         pass
     elif request.method =="DELETE":
         pass
     return render_template("user.html")
+
+
+@app.route("/storage", methods=["GET","POST","PUT", "DELETE"])
+def users():
+    if request.method=="POST":
+        pass
+    elif request.method =="PUT":
+        pass
+    elif request.method =="DELETE":
+        pass
+    return render_template("storage.html")
+
+
+@app.route("/invoice", methods=["GET","POST","PUT", "DELETE"])
+def users():
+    if request.method=="POST":
+        pass
+    elif request.method =="PUT":
+        pass
+    elif request.method =="DELETE":
+        pass
+    return render_template("invoice.html")
+
+@app.route("/stuff", methods=["GET","POST","PUT", "DELETE"])
+def users():
+    if request.method=="POST":
+        pass
+    elif request.method =="PUT":
+        pass
+    elif request.method =="DELETE":
+        pass
+    return render_template("stuff.html")
 
 app.run()
 
