@@ -1,12 +1,9 @@
-import time
-
 from sqlalchemy import create_engine
-from sqlalchemy.orm import relationship
-from sqlalchemy import text, and_, or_
 
 from shop.model.entity.base import Base
 
 from sqlalchemy.orm import sessionmaker
+
 
 # engine = create_engine('mysql+pymysql://root:root123@localhost:3306/mft', echo=True)
 
@@ -47,11 +44,8 @@ class DatabaseManager:
         self.session.close()
         return entity_list
 
-
     def find_by_code(self, class_name, code):
         self.make_engine()
         entity = self.session.get(class_name, code)
         self.session.close()
         return entity
-
-
