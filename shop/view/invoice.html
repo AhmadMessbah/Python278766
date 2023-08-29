@@ -1,0 +1,36 @@
+{% extends 'template.html' %}
+
+
+{% block content %}
+
+<form action="/user" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="number" name="password" placeholder="Password">
+    <input type="submit" value="Save">
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Operation</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for user in user_list %}
+    <tr>
+        <td>{{user.code}}</td>
+        <td>{{user.user_name}}</td>
+        <td>{{user.password}}</td>
+        <td>
+            <button onclick="edit({{user.code}})">Edit</button>
+            <button onclick="remove({{{{user.code}}}})">Remove</button>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
