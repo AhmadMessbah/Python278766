@@ -49,3 +49,9 @@ class DatabaseManager:
         entity = self.session.get(class_name, code)
         self.session.close()
         return entity
+
+    def find_by(self, class_name, filter):
+        self.make_engine()
+        entity = self.session.query(class_name).filter(filter)
+        self.session.close()
+        return entity
