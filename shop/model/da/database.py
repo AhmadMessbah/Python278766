@@ -5,10 +5,10 @@ from shop.model.entity.base import Base
 from sqlalchemy.orm import sessionmaker
 
 
-# engine = create_engine('mysql+pymysql://root:root123@localhost:3306/mft', echo=True)
 
 class DatabaseManager:
     def make_engine(self):
+        # engine = create_engine('mysql+pymysql://root:root123@localhost:3306/mft', echo=True)
         self.engine = create_engine('mysql+pymysql://root:@localhost:3307/mft')
 
         # Create Tables
