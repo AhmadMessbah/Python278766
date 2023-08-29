@@ -1,6 +1,6 @@
 import datetime
 
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String,Boolean,DateTime, ForeignKey
 from shop.model.entity.base import Base
 from sqlalchemy.orm import relationship
 
@@ -15,8 +15,8 @@ class Invoice(Base):
     amount = Column(Integer)
     discount = Column(Integer)
     pure_price = Column(Integer)
-    status = Column("bool")
-    date_time = Column("datetime.datetime")
+    status = Column(Boolean)
+    date_time = Column(DateTime)
     description = Column(str(50))
 
 
