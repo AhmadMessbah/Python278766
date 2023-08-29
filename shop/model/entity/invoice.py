@@ -1,5 +1,4 @@
 import datetime
-
 from sqlalchemy import Column, Integer, String,Boolean,DateTime, ForeignKey
 from shop.model.entity.base import Base
 from sqlalchemy.orm import relationship
