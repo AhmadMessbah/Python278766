@@ -1,5 +1,5 @@
 import datetime
-from sqlalchemy import Column, Integer, String,Boolean,DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
 from shop.model.entity.base import Base
 from sqlalchemy.orm import relationship
 
@@ -17,7 +17,6 @@ class Invoice(Base):
     status = Column(Boolean)
     date_time = Column(DateTime)
     description = Column(str(50))
-
 
     # customer = relationship("Customer", back_populates="invoices")
 
