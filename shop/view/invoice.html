@@ -14,34 +14,48 @@
 </head>
 
 <form action="/user" method="post">
-    <input type="text" name="username" placeholder="Username">
-    <input type="number" name="password" placeholder="Password">
+    <input type="number" name="code" placeholder="Code">
+    <input type="number" name="inv_code" placeholder="Inv_Code">
+    <input type="number" name="customer" placeholder="Customer">
+    <input type="number" name="customer_id" placeholder="Customer_id">
+    <input type="number" name="amount" placeholder="Amount">
+    <input type="number" name="discount" placeholder="Discount">
+    <input type="number" name="pure_price" placeholder="Pure_price">
+    <input type="number" name="status" placeholder="Status">
+    <input type="number" name="date_time" placeholder="Date_time">
+    <input type="text" name="description" placeholder="Description">
     <input type="submit" value="Save">
 </form>
 
 <table>
     <thead>
     <tr>
-        <th>Code</th>
+        <th>code</th>
         <th>inv_code</th>
         <th>customer</th>
         <th>customer_id</th>
-        <th>Username</th>
         <th>amount</th>
         <th>discount</th>
         <th>pure_price</th>
         <th>status</th>
         <th>date_time</th>
         <th>description</th>
-
     </tr>
     </thead>
     <tbody>
     {% for user in user_list %}
     <tr>
         <td>{{user.code}}</td>
-        <td>{{user.user_name}}</td>
-        <td>{{user.password}}</td>
+        <td>{{user.inv_code}}</td>
+        <td>{{user.customer}}</td>
+        <td>{{user.customer_id}}</td>
+        <td>{{user.amount}}</td>
+        <td>{{user.discount}}</td>
+        <td>{{user.pure_price}}</td>
+        <td>{{user.status}}</td>
+        <td>{{user.date_time}}</td>
+        <td>{{user.description}}</td>
+
         <td>
             <button onclick="edit({{user.code}})">Edit</button>
             <button onclick="remove({{{{user.code}}}})">Remove</button>
@@ -51,4 +65,6 @@
     </tbody>
 </table>
 
+<!DOCTYPE html>
+<html>
 {% endblock %}
