@@ -8,24 +8,30 @@ class InvoiceBl:
 
     @classmethod
     def save(cls, code):
-        return cls.db.save(code)
+        da = DatabaseManager()
+        return db.save(code)
 
     @classmethod
     def edit(cls, code):
-        return cls.db.edit(code)
+        da = DatabaseManager()
+        return db.edit(code)
 
     @classmethod
     def remove(cls, code):
-        return cls.db.remove(code)
+        da = DatabaseManager()
+        return db.remove(code)
 
     @classmethod
     def find_all(cls):
-        return cls.db.find_all()
+        da = DatabaseManager()
+        return db.find_all()
 
     @classmethod
     def find_by_inv_code(cls, inv_code):
-        return cls.db.find_by_inv_code(inv_code)
+        da = DatabaseManager()
+        return db.find_by_inv_code(inv_code)
 
     @classmethod
     def find_by_customer_id(cls, customer_id):
-        return cls.db.find_by_customer_id(customer_id)
+        da = DatabaseManager()
+        return db.find_by_customer_id(customer_id)
