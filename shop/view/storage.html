@@ -1,0 +1,44 @@
+{% extends 'template.html' %}
+
+
+{% block content %}
+
+<form action="/storage" method="post">
+    <input type="text" name="stuff_code" placeholder="Stuff Code">
+    <input type="number" name="count" placeholder="Count">
+    <input type="datetime-local" name="date_time" placeholder="Date Time">
+    <input type="radio" id="in" name="Type" value="In">
+    <label for="in">In</label>
+    <input type="radio" id="out" name="Type" value="Out">
+    <label for="out">Out</label>
+    <input type="submit" value="Save">
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Stuff Code</th>
+        <th>Count</th>
+        <th>Date time</th>
+        <th>T Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for storage in storage_list %}
+    <tr>
+        <td>{{storage.code}}</td>
+        <td>{{storage.stuff_code}}</td>
+        <td>{{storage.count}}</td>
+        <td>{{storage.date_time}}</td>
+        <td>{{storage.t_type}}</td>
+        <td>
+            <button onclick="edit({{storage.code}})">Edit</button>
+            <button onclick="remove({{storage.code}})">Remove</button>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

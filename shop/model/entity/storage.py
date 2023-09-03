@@ -12,11 +12,11 @@ class Storage(Base):
     count = Column(Integer)
     date_time = Column(TIMESTAMP)
 
-    def __init__(self,stuff_code,count,date_time):
+    def __init__(self,stuff_code,count,date_time,t_type):
         self.stuff_code = stuff_code
         self.count = count
         self.date_time = date_time
-        self.t_type = True
+        self.t_type = t_type
 
     def __repr__(self):
-        return str(f"{self.code} {self.stuff_code} {self.t_type} {self.count} {self.date_time}")
+        return str(f"{self.code} {self.stuff_code} {self.t_type} {self.count} {self.date_time} {self.t_type}")
